@@ -36,7 +36,7 @@ NSString *NSStringForScreenLockUIState(ScreenLockUIState value)
 {
     [super loadView];
 
-    self.view.backgroundColor = UIColor.ows_signalBlueColor;
+    self.view.backgroundColor = UIColor.whiteColor;
 
     UIView *edgesView = [UIView containerView];
     [self.view addSubview:edgesView];
@@ -53,7 +53,7 @@ NSString *NSStringForScreenLockUIState(ScreenLockUIState value)
     const CGFloat kButtonHeight = 40.f;
     OWSFlatButton *button =
         [OWSFlatButton buttonWithTitle:NSLocalizedString(@"SCREEN_LOCK_UNLOCK_SIGNAL",
-                                           @"Label for button on lock screen that lets users unlock Signal.")
+                                           @"Label for button on lock screen that lets users unlock SECROM Messenger.")
                                   font:[OWSFlatButton fontForHeight:kButtonHeight]
                             titleColor:UIColor.ows_signalBlueColor
                        backgroundColor:[UIColor whiteColor]

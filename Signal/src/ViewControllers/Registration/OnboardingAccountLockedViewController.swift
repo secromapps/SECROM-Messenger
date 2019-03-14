@@ -61,7 +61,7 @@ public class OnboardingAccountLockedViewController: OnboardingBaseViewController
         Logger.info("")
 
         // TODO PINs: Open the right support center URL
-        let vc = SFSafariViewController(url: URL(string: "https://support.signal.org/hc/en-us/articles/360007059792")!)
+        let vc = SFSafariViewController(url: URL(string: "https://messenger.secrom.com/knowledgebase/pins")!)
         present(vc, animated: true, completion: nil)
     }
 

@@ -164,7 +164,7 @@ NSString *const kOWSSoundsStorageGlobalNotificationKey = @"kOWSSoundsStorageGlob
         case OWSSound_Synth:
             return @"Synth";
         case OWSSound_SignalClassic:
-            return @"Signal Classic";
+            return @"Secrom Messenger Classic";
 
         // Call Audio
         case OWSSound_Opening:

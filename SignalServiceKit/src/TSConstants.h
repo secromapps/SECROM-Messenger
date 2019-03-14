@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, TSWhisperMessageType) {
 
 #define textSecureHTTPTimeOut 10
 
-#define kLegalTermsUrlString @"https://signal.org/legal/"
+#define kLegalTermsUrlString @"https://secrom.com/resources/legal"
 
 #define textSecureAccountsAPI @"v1/accounts"
 #define textSecureAttributesAPI @"v1/accounts/attributes/"
@@ -39,7 +39,7 @@ typedef NS_ENUM(NSInteger, TSWhisperMessageType) {
 #define textSecure2FAAPI @"v1/accounts/pin"
 #define textSecureRegistrationLockV2API @"v1/accounts/registration_lock"
 
-#define SignalApplicationGroup @"group.org.whispersystems.signal.group"
+#define SignalApplicationGroup @"group.com.secrom.messenger.group"
 
 #endif
 

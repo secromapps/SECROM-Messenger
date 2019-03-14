@@ -574,7 +574,7 @@ typedef void (^AttachmentDownloadFailure)(NSError *error);
     static dispatch_queue_t _serialQueue;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _serialQueue = dispatch_queue_create("org.whispersystems.attachment.decrypt", DISPATCH_QUEUE_SERIAL);
+        _serialQueue = dispatch_queue_create("com.secrom.attachment.decrypt", DISPATCH_QUEUE_SERIAL);
     });
 
     return _serialQueue;

@@ -86,7 +86,7 @@
                              accessibilityIdentifier:ACCESSIBILITY_IDENTIFIER_WITH_NAME(self, @"support")
                                          actionBlock:^{
                                              SFSafariViewController *safariVC = [[SFSafariViewController alloc]
-                                                 initWithURL:[NSURL URLWithString:@"https://support.signal.org"]];
+                                                 initWithURL:[NSURL URLWithString:@"https://messenger.secrom.com/knowledgebase"]];
                                              [weakSelf presentViewController:safariVC animated:YES completion:nil];
                                          }]];
     [contents addSection:helpSection];

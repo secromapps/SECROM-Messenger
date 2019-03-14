@@ -141,7 +141,7 @@ public class OWSScreenLock: NSObject {
         AssertIsOnMainThread()
 
         tryToVerifyLocalAuthentication(localizedReason: NSLocalizedString("SCREEN_LOCK_REASON_UNLOCK_SCREEN_LOCK",
-                                                                          comment: "Description of how and why Signal iOS uses Touch ID/Face ID/Phone Passcode to unlock 'screen lock'."),
+                                                                          comment: "Description of how and why SECROM Messenger iOS uses Touch ID/Face ID/Phone Passcode to unlock 'screen lock'."),
                                        completion: { (outcome: OWSScreenLockOutcome) in
                                         AssertIsOnMainThread()
 

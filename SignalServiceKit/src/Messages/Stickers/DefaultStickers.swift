@@ -20,10 +20,10 @@ class DefaultStickerPack {
 
     private class func parseAll() -> [StickerPackInfo: DefaultStickerPack] {
         let packs = [
-            // Bandit the Cat
-            DefaultStickerPack(packIdHex: "9acc9e8aba563d26a4994e69263e3b25", packKeyHex: "5a6dff3948c28efb9b7aaf93ecc375c69fc316e78077ed26867a14d10a0f6a12", shouldAutoInstall: true)!,
-            // Zozo the French Bulldog
-            DefaultStickerPack(packIdHex: "fb535407d2f6497ec074df8b9c51dd1d", packKeyHex: "17e971c134035622781d2ee249e6473b774583750b68c11bb82b7509c68b6dfd", shouldAutoInstall: true)!
+            // AIVAN
+            DefaultStickerPack(packIdHex: "c476059cb15a7660fbbe075332fd8619", packKeyHex: "cc95ecfbe523643ec131c15b68b20be2bcacf25615f37027b5358c7982907310", shouldAutoInstall: true)!,
+            // SANTALINA
+            DefaultStickerPack(packIdHex: "1c03b91dee7e8679203c3dbed97b440b", packKeyHex: "e5198b58f634fb255269eef2891d4859179be380cd42e048f77a3a9b7da42035", shouldAutoInstall: true)!
         ]
         var result = [StickerPackInfo: DefaultStickerPack]()
         for pack in packs {

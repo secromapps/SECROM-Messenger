@@ -73,6 +73,8 @@ target 'Signal' do
   # Pods only available inside the main Signal app
   pod 'SSZipArchive', :inhibit_warnings => true
   pod 'SignalRingRTC', path: 'ThirdParty/SignalRingRTC.podspec', inhibit_wranings: true
+  pod 'Fabric', :inhibit_warnings => true
+  pod 'Crashlytics', :inhibit_warnings => true
 
   target 'SignalTests' do
     inherit! :search_paths

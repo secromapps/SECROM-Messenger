@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
         [NSString stringWithFormat:linkedFormatString, [DateUtil.dateFormatter stringFromDate:device.createdAt]];
 
     NSString *lastSeenFormatString = NSLocalizedString(
-        @"DEVICE_LAST_ACTIVE_AT_LABEL", @"{{Short Date}} when device last communicated with Signal Server.");
+        @"DEVICE_LAST_ACTIVE_AT_LABEL", @"{{Short Date}} when device last communicated with SECROM Messenger Server.");
 
     NSDate *displayedLastSeenAt;
     // lastSeenAt is stored at day granularity. At midnight UTC.

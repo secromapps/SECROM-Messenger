@@ -621,7 +621,7 @@ NSString *const kProfileView_LastPresentedDate = @"kProfileView_LastPresentedDat
 {
     if (sender.state == UIGestureRecognizerStateRecognized) {
         SFSafariViewController *safariVC = [[SFSafariViewController alloc]
-            initWithURL:[NSURL URLWithString:@"https://support.signal.org/hc/en-us/articles/115001110511"]];
+            initWithURL:[NSURL URLWithString:@"https://messenger.secrom.com/knowledgebase/user-profile"]];
         [self presentViewController:safariVC animated:YES completion:nil];
     }
 }

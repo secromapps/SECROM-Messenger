@@ -343,7 +343,7 @@ NSString *const OWSMessageDecryptJobFinderExtensionGroup = @"OWSMessageProcessin
     static dispatch_queue_t queue = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        queue = dispatch_queue_create("org.whispersystems.message.decrypt", DISPATCH_QUEUE_SERIAL);
+        queue = dispatch_queue_create("com.secrom.message.decrypt", DISPATCH_QUEUE_SERIAL);
     });
     return queue;
 }

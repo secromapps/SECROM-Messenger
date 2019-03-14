@@ -3135,7 +3135,7 @@ typedef OWSContact * (^OWSContactBlock)(SDSAnyWriteTransaction *transaction);
                                                   return contact;
                                               }]];
     [actions addObject:[self fakeContactShareMessageAction:thread
-                                                     label:@"System Contact w/o Signal"
+                                                     label:@"System Contact w/o SECROM Messenger"
                                               contactBlock:^(SDSAnyWriteTransaction *transaction) {
                                                   OWSContact *contact = [OWSContact new];
                                                   OWSContactName *name = [OWSContactName new];
@@ -3150,7 +3150,7 @@ typedef OWSContact * (^OWSContactBlock)(SDSAnyWriteTransaction *transaction);
                                                   return contact;
                                               }]];
     [actions addObject:[self fakeContactShareMessageAction:thread
-                                                     label:@"System Contact w. Signal"
+                                                     label:@"System Contact w. SECROM Messenger"
                                               contactBlock:^(SDSAnyWriteTransaction *transaction) {
                                                   OWSContact *contact = [OWSContact new];
                                                   OWSContactName *name = [OWSContactName new];
@@ -3318,7 +3318,7 @@ typedef OWSContact * (^OWSContactBlock)(SDSAnyWriteTransaction *transaction);
                                                   return contact;
                                               }]];
     [actions addObject:[self sendContactShareMessageAction:thread
-                                                     label:@"System Contact w/o Signal"
+                                                     label:@"System Contact w/o SECROM Messenger"
                                               contactBlock:^(SDSAnyWriteTransaction *transaction) {
                                                   OWSContact *contact = [OWSContact new];
                                                   OWSContactName *name = [OWSContactName new];
@@ -3333,7 +3333,7 @@ typedef OWSContact * (^OWSContactBlock)(SDSAnyWriteTransaction *transaction);
                                                   return contact;
                                               }]];
     [actions addObject:[self sendContactShareMessageAction:thread
-                                                     label:@"System Contact w. Signal"
+                                                     label:@"System Contact w. SECROM Messenger"
                                               contactBlock:^(SDSAnyWriteTransaction *transaction) {
                                                   OWSContact *contact = [OWSContact new];
                                                   OWSContactName *name = [OWSContactName new];

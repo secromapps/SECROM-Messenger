@@ -7,7 +7,7 @@ import UIKit
 @objc(OWSPinReminderViewController)
 public class PinReminderViewController: OWSViewController {
 
-    private let recreatePinURL = "signal-pin://recreate"
+    private let recreatePinURL = "secrom-messenger-pin://recreate"
 
     private let containerView = UIView()
     private let pinTextField = UITextField()

@@ -132,16 +132,16 @@ public class TSConstants: NSObject {
 
 private class TSConstantsProduction: TSConstantsProtocol {
 
-    public let textSecureWebSocketAPI = "wss://textsecure-service.whispersystems.org/v1/websocket/"
-    public let textSecureServerURL = "https://textsecure-service.whispersystems.org/"
-    public let textSecureCDNServerURL = "https://cdn.signal.org"
+    public let textSecureWebSocketAPI = "wss://messenger-service.secrom.com/v1/websocket/"
+    public let textSecureServerURL = "https://messenger-service.secrom.com/"
+    public let textSecureCDNServerURL = "https://messenger-cdn.secrom.com"
     // Use same reflector for service and CDN
     public let textSecureServiceReflectorHost = "europe-west1-signal-cdn-reflector.cloudfunctions.net"
     public let textSecureCDNReflectorHost = "europe-west1-signal-cdn-reflector.cloudfunctions.net"
-    public let contactDiscoveryURL = "https://api.directory.signal.org"
+    public let contactDiscoveryURL = "https://contact-discovery-prod.secrom.com"
     public let keyBackupURL = "https://api.backup.signal.org"
     public let storageServiceURL = "https://storage.signal.org"
-    public let kUDTrustRoot = "BXu6QIKVz5MA8gstzfOgRQGqyLqOwNKHL6INkv3IHWMF"
+    public let kUDTrustRoot = "BeN1gdHBhdXkDwCwAAdm5sv/CU/tIFASlU3fPfTRNGNd"
 
     public let serviceCensorshipPrefix = "service"
     public let cdnCensorshipPrefix = "cdn"

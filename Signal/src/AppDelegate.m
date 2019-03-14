@@ -43,11 +43,13 @@
 #import <SignalServiceKit/TSSocketManager.h>
 #import <UserNotifications/UserNotifications.h>
 #import <WebRTC/WebRTC.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 NSString *const AppDelegateStoryboardMain = @"Main";
 
 static NSString *const kInitialViewControllerIdentifier = @"UserInitialViewController";
-static NSString *const kURLSchemeSGNLKey                = @"sgnl";
+static NSString *const kURLSchemeSGNLKey                = @"secrommessenger";
 static NSString *const kURLHostVerifyPrefix             = @"verify";
 static NSString *const kURLHostAddStickersPrefix = @"addstickers";
 
@@ -213,6 +215,8 @@ NSString *NSStringForLaunchFailure(LaunchFailure launchFailure)
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    [Fabric with:@[[Crashlytics class]]];
+
     // This should be the first thing we do.
     SetCurrentAppContext([MainAppContext new]);
 
@@ -342,6 +346,8 @@ NSString *NSStringForLaunchFailure(LaunchFailure launchFailure)
     OWSLogInfo(@"launchOptions: %@.", launchOptions);
 
     [OWSAnalytics appLaunchDidBegin];
+
+    self.window.tintColor = UIColor.redColor;
 
     return YES;
 }
@@ -488,6 +494,7 @@ NSString *NSStringForLaunchFailure(LaunchFailure launchFailure)
     }
 
     OWSLogInfo(@"registered vanilla push token");
+    OWSLogInfo([NSString stringWithFormat:@"device token = %@", deviceToken]);
     [self.pushRegistrationManager didReceiveVanillaPushToken:deviceToken];
 }
 

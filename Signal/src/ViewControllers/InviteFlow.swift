@@ -14,8 +14,8 @@ class InviteFlow: NSObject, MFMessageComposeViewControllerDelegate, MFMailCompos
         case message, mail, twitter
     }
 
-    private let installUrl = "https://signal.org/install/"
-    private let homepageUrl = "https://signal.org"
+    private let installUrl = "https://secrom.com/software-downloads"
+    private let homepageUrl = "https://messenger.secrom.com"
 
     private weak var presentingViewController: UIViewController?
 
@@ -219,7 +219,7 @@ class InviteFlow: NSObject, MFMessageComposeViewControllerDelegate, MFMailCompos
         messageComposeViewController.messageComposeDelegate = self
         messageComposeViewController.recipients = phoneNumbers
 
-        let inviteText = NSLocalizedString("SMS_INVITE_BODY", comment: "body sent to contacts when inviting to Install Signal")
+        let inviteText = NSLocalizedString("SMS_INVITE_BODY", comment: "body sent to contacts when inviting to Install SECROM Messenger")
         messageComposeViewController.body = inviteText.appending(" \(self.installUrl)")
         presentingViewController?.present(messageComposeViewController, animated: true)
     }
@@ -273,8 +273,8 @@ class InviteFlow: NSObject, MFMessageComposeViewControllerDelegate, MFMailCompos
         mailComposeViewController.mailComposeDelegate = self
         mailComposeViewController.setBccRecipients(recipientEmails)
 
-        let subject = NSLocalizedString("EMAIL_INVITE_SUBJECT", comment: "subject of email sent to contacts when inviting to install Signal")
-        let bodyFormat = NSLocalizedString("EMAIL_INVITE_BODY", comment: "body of email sent to contacts when inviting to install Signal. Embeds {{link to install Signal}} and {{link to the Signal home page}}")
+        let subject = NSLocalizedString("EMAIL_INVITE_SUBJECT", comment: "subject of email sent to contacts when inviting to install SECROM Messenger")
+        let bodyFormat = NSLocalizedString("EMAIL_INVITE_BODY", comment: "body of email sent to contacts when inviting to install SECROM Messenger. Embeds {{link to install SECROM Messenger}} and {{link to the SECROM Messenger home page}}")
         let body = String.init(format: bodyFormat, installUrl, homepageUrl)
         mailComposeViewController.setSubject(subject)
         mailComposeViewController.setMessageBody(body, isHTML: false)

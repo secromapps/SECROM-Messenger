@@ -32,10 +32,10 @@ class DebugUIReportsViewController: OWSTableViewController {
 
         contents.addSection(
             OWSTableSection(title: "Print Reports", items: [
-                OWSTableItem.init(title: "Signal Recipients") { [weak self] in
+                OWSTableItem.init(title: "Secrom Messenger Recipients") { [weak self] in
                     guard let self = self else { return }
                     self.databaseStorage.read { transaction in
-                        let report = Report(title: "Signal Recipients",
+                        let report = Report(title: "Secrom Messenger Recipients",
                                             text: self.signalRecipientsReport(transaction: transaction))
                         self.currentReport = report
                         Logger.debug("report: \(report.title), text:\n \(report.text)")
@@ -72,7 +72,7 @@ class DebugUIReportsViewController: OWSTableViewController {
             reportText.append("\n")
         }
 
-        report("== Signal Recipients ==")
+        report("== Secrom Messenger Recipients ==")
         var i = 0
         SignalRecipient.anyEnumerate(transaction: transaction) { (recipient, _) in
             i += 1
@@ -93,14 +93,14 @@ class DebugUIReportsViewController: OWSTableViewController {
         }
 
         if duplicatedRecipients.count > 0 {
-            report("== Duplicated Signal Recipients ==")
+            report("== Duplicated Secrom Messenger Recipients ==")
             i = 0
             for (address, recipientIds) in duplicatedRecipients {
                 i += 1
                 report("\(i). address: \(address), recipientIds \(recipientIds.count): \(recipientIds)")
             }
         } else {
-            report("== No Duplicated Signal Recipients ==")
+            report("== No Duplicated Secrom Messenger Recipients ==")
         }
 
         return reportText

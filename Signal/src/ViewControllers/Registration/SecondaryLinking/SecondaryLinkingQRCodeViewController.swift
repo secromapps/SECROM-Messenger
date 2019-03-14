@@ -84,7 +84,7 @@ public class SecondaryLinkingQRCodeViewController: OnboardingBaseViewController 
             return
         }
 
-        let vc = SFSafariViewController(url: URL(string: "https://support.signal.org/hc/en-us/articles/360007320451")!)
+        let vc = SFSafariViewController(url: URL(string: "https://messenger.secrom.com/knowledgebase/multiple-devices")!)
         present(vc, animated: true)
     }
 

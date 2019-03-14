@@ -38,9 +38,9 @@ class SAEFailedViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel,
                                                                 target: self,
                                                                 action: #selector(cancelPressed))
-        self.navigationItem.title = "Signal"
+        self.navigationItem.title = "SECROM Messenger"
 
-        self.view.backgroundColor = UIColor.ows_signalBlue
+        self.view.backgroundColor = UIColor.white
 
         let logoImage = UIImage(named: "logoSignal")
         let logoImageView = UIImageView(image: logoImage)

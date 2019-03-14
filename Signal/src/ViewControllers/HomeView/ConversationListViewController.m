@@ -366,7 +366,7 @@ NSString *const kArchiveButtonPseudoGroup = @"kArchiveButtonPseudoGroup";
     SET_SUBVIEW_ACCESSIBILITY_IDENTIFIER(self, expiredView);
 
     ReminderView *outageView = [ReminderView
-        nagWithText:NSLocalizedString(@"OUTAGE_WARNING", @"Label warning the user that the Signal service may be down.")
+        nagWithText:NSLocalizedString(@"OUTAGE_WARNING", @"Label warning the user that the SECROM Messenger service may be down.")
           tapAction:nil];
     _outageView = outageView;
     [reminderStackView addArrangedSubview:outageView];
@@ -572,20 +572,20 @@ NSString *const kArchiveButtonPseudoGroup = @"kArchiveButtonPseudoGroup";
 
         formatString = NSLocalizedString(@"HOME_VIEW_FIRST_CONVERSATION_OFFER_3_CONTACTS_FORMAT",
             @"Format string for a label offering to start a new conversation with your contacts, if you have at least "
-            @"3 Signal contacts.  Embeds {{The names of 3 of your Signal contacts}}.");
+            @"3 SECROM Messenger contacts.  Embeds {{The names of 3 of your SECROM Messenger contacts}}.");
     } else if (signalAccounts.count == 2) {
         [contactNames addObject:[self.contactsManager displayNameForSignalAccount:signalAccounts[0]]];
         [contactNames addObject:[self.contactsManager displayNameForSignalAccount:signalAccounts[1]]];
 
         formatString = NSLocalizedString(@"HOME_VIEW_FIRST_CONVERSATION_OFFER_2_CONTACTS_FORMAT",
-            @"Format string for a label offering to start a new conversation with your contacts, if you have 2 Signal "
-            @"contacts.  Embeds {{The names of 2 of your Signal contacts}}.");
+            @"Format string for a label offering to start a new conversation with your contacts, if you have 2 SECROM Messenger "
+            @"contacts.  Embeds {{The names of 2 of your SECROM Messenger contacts}}.");
     } else if (signalAccounts.count == 1) {
         [contactNames addObject:[self.contactsManager displayNameForSignalAccount:signalAccounts[0]]];
 
         formatString = NSLocalizedString(@"HOME_VIEW_FIRST_CONVERSATION_OFFER_1_CONTACT_FORMAT",
-            @"Format string for a label offering to start a new conversation with your contacts, if you have 1 Signal "
-            @"contact.  Embeds {{The name of 1 of your Signal contacts}}.");
+            @"Format string for a label offering to start a new conversation with your contacts, if you have 1 SECROM Messenger "
+            @"contact.  Embeds {{The name of 1 of your SECROM Messenger contacts}}.");
     }
 
     NSString *embedToken = @"%@";
@@ -626,7 +626,7 @@ NSString *const kArchiveButtonPseudoGroup = @"kArchiveButtonPseudoGroup";
     if (!attributedString) {
         // The default case handles the no-contacts scenario and all error cases.
         NSString *defaultText = NSLocalizedString(@"HOME_VIEW_FIRST_CONVERSATION_OFFER_NO_CONTACTS",
-            @"A label offering to start a new conversation with your contacts, if you have no Signal contacts.");
+            @"A label offering to start a new conversation with your contacts, if you have no SECROM Messenger contacts.");
         attributedString = [[NSMutableAttributedString alloc] initWithString:defaultText];
     }
 
@@ -756,7 +756,8 @@ NSString *const kArchiveButtonPseudoGroup = @"kArchiveButtonPseudoGroup";
 {
     [super viewDidAppear:animated];
 
-    [self displayAnyUnseenUpgradeExperience];
+    // Disable Unseen upgrades
+    //[self displayAnyUnseenUpgradeExperience];
     [self applyDefaultBackButton];
 
     if (self.hasThemeChanged) {
@@ -1192,33 +1193,29 @@ NSString *const kArchiveButtonPseudoGroup = @"kArchiveButtonPseudoGroup";
 - (NSArray<ExperienceUpgrade *> *)unseenUpgradeExperiences
 {
     OWSAssertIsOnMainThread();
-
-    __block NSArray<ExperienceUpgrade *> *unseenUpgrades;
-    [self.databaseStorage uiReadWithBlock:^(SDSAnyReadTransaction *transaction) {
-        unseenUpgrades = [ExperienceUpgradeFinder.sharedManager allUnseenWithTransaction:transaction];
-    }];
-    return unseenUpgrades;
+//    Disable unseenUpgrades
+//    __block NSArray<ExperienceUpgrade *> *unseenUpgrades;
+//    [self.uiDatabaseConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
+//        unseenUpgrades = [ExperienceUpgradeFinder.sharedManager allUnseenWithTransaction:transaction];
+//    }];
+//    return unseenUpgrades;
 }
 
-- (void)displayAnyUnseenUpgradeExperience
-{
-    OWSAssertIsOnMainThread();
-
-    NSArray<ExperienceUpgrade *> *unseenUpgrades = [self unseenUpgradeExperiences];
-
-    if (unseenUpgrades.count > 0) {
-        ExperienceUpgrade *firstUpgrade = unseenUpgrades.firstObject;
-        UIViewController *_Nullable viewController =
-            [ExperienceUpgradeViewController viewControllerForExperienceUpgrade:firstUpgrade];
-        if (viewController == nil) {
-            OWSFailDebug(@"Could not display experience upgrade.");
-            return;
-        }
-        [self presentFormSheetViewController:viewController animated:YES completion:nil];
-    } else {
-        [OWSActionSheets showIOSUpgradeNagIfNecessary];
-    }
-}
+//// Disable Unseen upgrades
+//- (void)displayAnyUnseenUpgradeExperience
+//{
+//    OWSAssertIsOnMainThread();
+//
+//    NSArray<ExperienceUpgrade *> *unseenUpgrades = [self unseenUpgradeExperiences];
+//
+//    if (unseenUpgrades.count > 0) {
+//        ExperienceUpgradesPageViewController *experienceUpgradeViewController =
+//            [[ExperienceUpgradesPageViewController alloc] initWithExperienceUpgrades:unseenUpgrades];
+//        [self presentViewController:experienceUpgradeViewController animated:YES completion:nil];
+//    } else {
+//        [OWSAlerts showIOSUpgradeNagIfNecessary];
+//    }
+//}
 
 - (void)tableViewSetUp
 {

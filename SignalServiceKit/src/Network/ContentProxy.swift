@@ -15,8 +15,8 @@ public class ContentProxy: NSObject {
     @objc
     public class func sessionConfiguration() -> URLSessionConfiguration {
         let configuration = URLSessionConfiguration.ephemeral
-        let proxyHost = "contentproxy.signal.org"
-        let proxyPort = 443
+        let proxyHost = "contentproxy.secrom.com"
+        let proxyPort = 80
         configuration.connectionProxyDictionary = [
             "HTTPEnable": 1,
             "HTTPProxy": proxyHost,
@@ -40,7 +40,7 @@ public class ContentProxy: NSObject {
         return jsonSessionManager
     }
 
-    static let userAgent = "Signal iOS (+https://signal.org/download)"
+    static let userAgent = "SECROM Messenger (+https://messenger.secrom.com)"
 
     public class func configureProxiedRequest(request: inout URLRequest) -> Bool {
         request.addValue(userAgent, forHTTPHeaderField: "User-Agent")

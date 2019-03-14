@@ -76,7 +76,7 @@ typedef void (^DebugLogUploadFailure)(DebugLogUploader *uploader, NSError *error
         [[AFHTTPSessionManager alloc] initWithBaseURL:nil sessionConfiguration:sessionConf];
     sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
     sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
-    NSString *urlString = @"https://debuglogs.org/";
+    NSString *urlString = @"https://debuglogs.secrom.com/";
     [sessionManager GET:urlString
         parameters:nil
         progress:nil
@@ -180,7 +180,7 @@ typedef void (^DebugLogUploadFailure)(DebugLogUploader *uploader, NSError *error
         success:^(NSURLSessionDataTask *task, id _Nullable responseObject) {
             OWSLogVerbose(@"Response: %@, %@", uploadUrl, responseObject);
 
-            NSString *urlString = [NSString stringWithFormat:@"https://debuglogs.org/%@", uploadKey];
+            NSString *urlString = [NSString stringWithFormat:@"https://debuglogs.secrom.com/%@", uploadKey];
             [self succeedWithUrl:[NSURL URLWithString:urlString]];
         }
         failure:^(NSURLSessionDataTask *_Nullable task, NSError *error) {
@@ -323,7 +323,7 @@ typedef void (^DebugLogUploadFailure)(DebugLogUploader *uploader, NSError *error
                           accessibilityIdentifier:ACCESSIBILITY_IDENTIFIER_WITH_NAME(self, @"send_email")
                                             style:ActionSheetActionStyleDefault
                                           handler:^(ActionSheetAction *action) {
-                                              [self submitEmailWithLogUrl:url subject:@"Signal - iOS Debug Log"];
+                                              [self submitEmailWithLogUrl:url subject:@"Secrom Messenger - iOS Debug Log"];
                                               completion();
                                           }]];
         [alert addAction:[[ActionSheetAction alloc]
@@ -347,15 +347,6 @@ typedef void (^DebugLogUploadFailure)(DebugLogUploader *uploader, NSError *error
                                                  [Pastelog.sharedManager sendToSelf:url];
                                              }]];
 #endif
-        [alert
-            addAction:[[ActionSheetAction
-                          alloc] initWithTitle:NSLocalizedString(@"DEBUG_LOG_ALERT_OPTION_BUG_REPORT",
-                                                   @"Label for the 'Open a Bug Report' option of the debug log alert.")
-                          accessibilityIdentifier:ACCESSIBILITY_IDENTIFIER_WITH_NAME(self, @"submit_bug_report")
-                                            style:ActionSheetActionStyleDefault
-                                          handler:^(ActionSheetAction *action) {
-                                              [Pastelog.sharedManager prepareRedirection:url completion:completion];
-                                          }]];
         [alert addAction:[[ActionSheetAction alloc]
                                        initWithTitle:NSLocalizedString(@"DEBUG_LOG_ALERT_OPTION_SHARE",
                                                          @"Label for the 'Share' option of the debug log alert.")
@@ -530,7 +521,7 @@ typedef void (^DebugLogUploadFailure)(DebugLogUploader *uploader, NSError *error
           [UIDevice currentDevice].systemVersion,
           [NSString stringFromSysctlKey:@"kern.osversion"]];
 
-    [body appendFormat:@"Signal Version: %@ \n", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
+    [body appendFormat:@"Secrom Messenger Version: %@ \n", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
     if (url != nil) {
         [body appendFormat:@"Log URL: %@ \n", url];
     }
@@ -551,35 +542,6 @@ typedef void (^DebugLogUploadFailure)(DebugLogUploader *uploader, NSError *error
             showErrorAlertWithMessage:NSLocalizedString(@"DEBUG_LOG_COULD_NOT_EMAIL",
                                           @"Error indicating that the app could not launch the Email app.")];
     }
-}
-
-- (void)prepareRedirection:(NSURL *)url completion:(SubmitDebugLogsCompletion)completion
-{
-    OWSAssertDebug(completion);
-
-    UIPasteboard *pb = [UIPasteboard generalPasteboard];
-    [pb setString:url.absoluteString];
-
-    ActionSheetController *alert =
-        [[ActionSheetController alloc] initWithTitle:NSLocalizedString(@"DEBUG_LOG_GITHUB_ISSUE_ALERT_TITLE",
-                                                         @"Title of the alert before redirecting to GitHub Issues.")
-                                             message:NSLocalizedString(@"DEBUG_LOG_GITHUB_ISSUE_ALERT_MESSAGE",
-                                                         @"Message of the alert before redirecting to GitHub Issues.")];
-    [alert
-        addAction:[[ActionSheetAction alloc]
-                                initWithTitle:NSLocalizedString(@"OK", @"")
-                      accessibilityIdentifier:ACCESSIBILITY_IDENTIFIER_WITH_NAME(self, @"ok")
-                                        style:ActionSheetActionStyleDefault
-                                      handler:^(ActionSheetAction *action) {
-                                          [UIApplication.sharedApplication
-                                              openURL:[NSURL
-                                                          URLWithString:[[NSBundle mainBundle]
-                                                                            objectForInfoDictionaryKey:@"LOGS_URL"]]];
-
-                                          completion();
-                                      }]];
-    UIViewController *presentingViewController = UIApplication.sharedApplication.frontmostViewControllerIgnoringAlerts;
-    [presentingViewController presentActionSheet:alert];
 }
 
 - (void)sendToSelf:(NSURL *)url

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D221A088169C9E5E00537ABF"
-               BuildableName = "Signal.app"
+               BuildableName = "SECROM Messenger.app"
                BlueprintName = "Signal"
                ReferencedContainer = "container:Signal.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D221A088169C9E5E00537ABF"
-            BuildableName = "Signal.app"
+            BuildableName = "SECROM Messenger.app"
             BlueprintName = "Signal"
             ReferencedContainer = "container:Signal.xcodeproj">
          </BuildableReference>
@@ -72,7 +72,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "11A6D3ED18260650136E8F509A45FB35"
+               BlueprintIdentifier = "B772E882F193AA2F25932C514BBF0805"
                BuildableName = "SignalServiceKit-Unit-Tests.xctest"
                BlueprintName = "SignalServiceKit-Unit-Tests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -140,8 +140,6 @@
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      stopOnEveryThreadSanitizerIssue = "YES"
-      stopOnEveryUBSanitizerIssue = "YES"
       migratedStopOnEveryIssue = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
@@ -151,7 +149,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D221A088169C9E5E00537ABF"
-            BuildableName = "Signal.app"
+            BuildableName = "SECROM Messenger.app"
             BlueprintName = "Signal"
             ReferencedContainer = "container:Signal.xcodeproj">
          </BuildableReference>
@@ -190,7 +188,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D221A088169C9E5E00537ABF"
-            BuildableName = "Signal.app"
+            BuildableName = "SECROM Messenger.app"
             BlueprintName = "Signal"
             ReferencedContainer = "container:Signal.xcodeproj">
          </BuildableReference>
@@ -200,7 +198,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "App Store Release"
+      buildConfiguration = "Debug"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

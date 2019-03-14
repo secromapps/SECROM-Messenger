@@ -76,7 +76,7 @@ class DebugUINotifications: DebugUIPage {
                 self?.notifyUserForThreadlessErrorMessage().retainUntilComplete()
             },
 
-            OWSTableItem(title: "Notify of New Signal Users") { [weak self] in
+            OWSTableItem(title: "Notify of New Secrom Messenger Users") { [weak self] in
                 self?.notifyOfNewUsers().retainUntilComplete()
             }
 

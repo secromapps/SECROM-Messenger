@@ -127,7 +127,7 @@ NSString *const OWSContactsManagerKeyNextFullIntersectionDate = @"OWSContactsMan
     static dispatch_queue_t _serialQueue;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _serialQueue = dispatch_queue_create("org.whispersystems.contacts.buildSignalAccount", DISPATCH_QUEUE_SERIAL);
+        _serialQueue = dispatch_queue_create("com.secrom.contacts.buildSignalAccount", DISPATCH_QUEUE_SERIAL);
     });
 
     return _serialQueue;

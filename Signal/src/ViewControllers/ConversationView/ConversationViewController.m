@@ -5363,7 +5363,7 @@ typedef enum : NSUInteger {
 
     // TODO Message Request: Use right support url. Right now this just links to the profiles FAQ
     SFSafariViewController *safariVC = [[SFSafariViewController alloc]
-        initWithURL:[NSURL URLWithString:@"https://support.signal.org/hc/en-us/articles/360007459591"]];
+        initWithURL:[NSURL URLWithString:@"https://messenger.secrom.com/knowledgebase/user-profile"]];
     [self presentViewController:safariVC animated:YES completion:nil];
 }
 

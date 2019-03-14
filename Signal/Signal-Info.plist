@@ -5,14 +5,14 @@
 	<key>BuildDetails</key>
 	<dict>
 		<key>OSXVersion</key>
-		<string>10.15.1</string>
+		<string>10.15.4</string>
 		<key>WebRTCCommit</key>
-		<string>7115a09728e023ca6132e14bd9d5f8bc5e1f0b92 Production build of v0.3.1 (Xcode 10.3)</string>
+		<string>b1264f1eb4dd268bda87f535f6479bddeb4adaec Production build of v1.3.1</string>
 	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>SECROM Messenger</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
@@ -28,7 +28,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.2.0</string>
+	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -37,21 +37,33 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>org.whispersystems.signal</string>
+			<string>com.secrom.messenger</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>sgnl</string>
+				<string>secrommessenger</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3.2.0.8</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>b9829e6a924fb1741452c0295ec8694d7f801957</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LOGS_EMAIL</key>
-	<string>support@signal.org</string>
-	<key>LOGS_URL</key>
-	<string>https://github.com/signalapp/Signal-iOS/issues</string>
+	<string>support@secrom.com</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.social-networking</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -67,35 +79,14 @@
 				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 			</dict>
-			<key>api-staging.backup.signal.org</key>
+			<key>contact-discovery-prod.secrom.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
 				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 			</dict>
-			<key>api-staging.directory.signal.org</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
-			<key>api.backup.signal.org</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
-			<key>api.directory.signal.org</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
-			<key>signal.org</key>
+			<key>secrom.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
@@ -112,21 +103,21 @@
 		</dict>
 	</dict>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>Signal needs to use Apple Music to play media attachments.</string>
+	<string>SECROM Messenger needs to use Apple Music to play media attachments.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Signal uses your camera to take photos and for video calls.</string>
+	<string>SECROM Messenger uses your camera to take photos and for video calls.</string>
 	<key>NSContactsUsageDescription</key>
-	<string>Signal uses your contacts to find users you know. We do not store your contacts on the server.</string>
+	<string>SECROM Messenger uses your contacts to find users you know. We do not store your contacts on the server.</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>Signal's Screen Lock uses Face ID.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Signal needs access to your location in order to share your current location.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Signal needs access to your microphone to make and receive phone calls and record voice messages.</string>
+	<string>SECROM Messenger needs access to your microphone to make and receive phone calls and record voice messages.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Signal will save photos to your library.</string>
+	<string>SECROM Messenger will save photos to your library.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Signal will let you choose which photos from your library to send.</string>
+	<string>SECROM Messenger will let you choose which photos from your library to send.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>dripicons-v2.ttf</string>
@@ -141,7 +132,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>New Message</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>org.whispersystems.signal.quickCompose</string>
+			<string>com.secrom.messenger.quickCompose</string>
 		</dict>
 	</array>
 	<key>UIBackgroundModes</key>

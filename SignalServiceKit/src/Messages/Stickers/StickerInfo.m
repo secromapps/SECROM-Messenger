@@ -111,7 +111,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)shareUrl
 {
-    return [NSString stringWithFormat:@"https://signal.art/addstickers/#pack_id=%@&pack_key=%@",
+    return [NSString stringWithFormat:@"https://stickers.secrom.com/addstickers/#pack_id=%@&pack_key=%@",
                      self.packId.hexadecimalString,
                      self.packKey.hexadecimalString];
 }

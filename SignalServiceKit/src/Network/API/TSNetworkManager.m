@@ -31,7 +31,7 @@ dispatch_queue_t NetworkManagerQueue()
     static dispatch_queue_t serialQueue;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        serialQueue = dispatch_queue_create("org.whispersystems.networkManager", DISPATCH_QUEUE_SERIAL);
+        serialQueue = dispatch_queue_create("com.secrom.networkManager", DISPATCH_QUEUE_SERIAL);
     });
     return serialQueue;
 }

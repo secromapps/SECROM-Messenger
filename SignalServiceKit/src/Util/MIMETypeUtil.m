@@ -30,9 +30,9 @@ NSString *const OWSMimeTypeUnknownForTests = @"unknown/mimetype";
 NSString *const OWSMimeTypeApplicationZip = @"application/zip";
 NSString *const OWSMimeTypeProtobuf = @"application/x-protobuf";
 
-NSString *const kOversizeTextAttachmentUTI = @"org.whispersystems.oversize-text-attachment";
+NSString *const kOversizeTextAttachmentUTI = @"com.secrom.oversize-text-attachment";
 NSString *const kOversizeTextAttachmentFileExtension = @"txt";
-NSString *const kUnknownTestAttachmentUTI = @"org.whispersystems.unknown";
+NSString *const kUnknownTestAttachmentUTI = @"com.secrom.unknown";
 NSString *const kSyncMessageFileExtension = @"bin";
 
 @implementation MIMETypeUtil

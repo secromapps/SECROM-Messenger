@@ -289,7 +289,7 @@ extension GiphyError: LocalizedError {
     // MARK: Search
 
     // This is the Signal iOS API key.
-    let kGiphyApiKey = "ZsUpUm2L6cVbvei347EQNp7HrROjbOdc"
+    let kGiphyApiKey = "5CUR1JorrCp2AQ4WqzUeaZOcEmkG1suW"
     let kGiphyPageSize = 100
 
     public func trending() -> Promise<[GiphyImageInfo]> {

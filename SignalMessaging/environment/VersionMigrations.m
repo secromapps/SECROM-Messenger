@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
         OWSLogError(@"Migrating from RedPhone no longer supported. Quitting.");
         // Not translating these as so few are affected.
         ActionSheetController *actionSheet = [[ActionSheetController alloc]
-            initWithTitle:@"You must reinstall Signal"
+            initWithTitle:@"You must reinstall SECROM Messenger"
                   message:@"Sorry, your installation is too old for us to update. You'll have to start fresh."];
 
         ActionSheetAction *quitAction = [[ActionSheetAction alloc] initWithTitle:@"Quit"
