@@ -5,16 +5,16 @@
 	<key>BuildDetails</key>
 	<dict>
 		<key>CarthageVersion</key>
-		<string>0.31.2</string>
+		<string>0.28.0</string>
 		<key>OSXVersion</key>
-		<string>10.14.3</string>
+		<string>10.13.6</string>
 		<key>WebRTCCommit</key>
 		<string>55de5593cc261fa9368c5ccde98884ed1e278ba0 M72</string>
 	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>SECROM Messanger</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
@@ -39,10 +39,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>org.whispersystems.signal</string>
+			<string>com.secrom.messenger</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>sgnl</string>
+				<string>secrommessenger</string>
 			</array>
 		</dict>
 	</array>
@@ -127,7 +127,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>New Message</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>org.whispersystems.signal.quickCompose</string>
+			<string>com.secrom.messenger.quickCompose</string>
 		</dict>
 	</array>
 	<key>UIBackgroundModes</key>
