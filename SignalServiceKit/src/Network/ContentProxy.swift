@@ -52,7 +52,7 @@ public class ContentProxy: NSObject {
         return sessionManager
     }
 
-    static let userAgent = "Signal iOS (+https://signal.org/download)"
+    static let userAgent = "SECROM Messenger (+https://secrom.com)"
 
     public class func configureProxiedRequest(request: inout URLRequest) -> Bool {
         request.addValue(userAgent, forHTTPHeaderField: "User-Agent")
