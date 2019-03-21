@@ -25,14 +25,14 @@ typedef NS_ENUM(NSInteger, TSWhisperMessageType) {
 //#ifndef DEBUG
 
 // Production
-#define textSecureWebSocketAPI @"wss://textsecure-service.whispersystems.org/v1/websocket/"
-#define textSecureServerURL @"https://textsecure-service.whispersystems.org/"
-#define textSecureCDNServerURL @"https://cdn.signal.org"
+#define textSecureWebSocketAPI @"wss://messenger-service.secrom.com/v1/websocket/"
+#define textSecureServerURL @"https://messenger-service.secrom.com/"
+#define textSecureCDNServerURL @"https://secrom-profiles-cdn.secrom.com"
 // Use same reflector for service and CDN
 #define textSecureServiceReflectorHost @"textsecure-service-reflected.whispersystems.org"
 #define textSecureCDNReflectorHost @"textsecure-service-reflected.whispersystems.org"
-#define contactDiscoveryURL @"https://api.directory.signal.org"
-#define kUDTrustRoot @"BXu6QIKVz5MA8gstzfOgRQGqyLqOwNKHL6INkv3IHWMF"
+#define contactDiscoveryURL @"https://contact-discovery-prod.secrom.com"
+#define kUDTrustRoot @"BeN1gdHBhdXkDwCwAAdm5sv/CU/tIFASlU3fPfTRNGNd"
 #define USING_PRODUCTION_SERVICE
 
 //#else
