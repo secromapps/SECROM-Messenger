@@ -325,11 +325,11 @@ NS_ASSUME_NONNULL_BEGIN
     UIAlertController *alertController = [UIAlertController
         alertControllerWithTitle:NSLocalizedString(@"EDIT_CONTACT_WITHOUT_CONTACTS_PERMISSION_ALERT_TITLE", comment
                                                    : @"Alert title for when the user has just tried to edit a "
-                                                     @"contacts after declining to give Signal contacts "
+                                                     @"contacts after declining to give SECROM Messenger contacts "
                                                      @"permissions")
                          message:NSLocalizedString(@"EDIT_CONTACT_WITHOUT_CONTACTS_PERMISSION_ALERT_BODY", comment
                                                    : @"Alert body for when the user has just tried to edit a "
-                                                     @"contacts after declining to give Signal contacts "
+                                                     @"contacts after declining to give SECROM Messenger contacts "
                                                      @"permissions")
                   preferredStyle:UIAlertControllerStyleAlert];
 

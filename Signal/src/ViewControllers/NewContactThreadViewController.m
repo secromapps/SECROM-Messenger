@@ -432,7 +432,7 @@ NS_ASSUME_NONNULL_BEGIN
                 [contactsSection
                     addItem:[OWSTableItem softCenterLabelItemWithText:
                                               NSLocalizedString(@"SETTINGS_BLOCK_LIST_NO_CONTACTS",
-                                                  @"A label that indicates the user has no Signal contacts.")
+                                                  @"A label that indicates the user has no SECROM Messenger contacts.")
                                                       customRowHeight:UITableViewAutomaticDimension]];
             } else {
                 UITableViewCell *loadingCell = [OWSTableItem newCell];
@@ -549,7 +549,7 @@ NS_ASSUME_NONNULL_BEGIN
                             }]];
         } else {
             NSString *text = [NSString stringWithFormat:NSLocalizedString(@"SEND_INVITE_VIA_SMS_BUTTON_FORMAT",
-                                                            @"Text for button to send a Signal invite via SMS. %@ is "
+                                                            @"Text for button to send a SECROM Messenger invite via SMS. %@ is "
                                                             @"placeholder for the recipient's phone number."),
                                        phoneNumber];
             [phoneNumbersSection addItem:[OWSTableItem disclosureItemWithText:text
@@ -641,7 +641,7 @@ NS_ASSUME_NONNULL_BEGIN
         }
 
         NSString *text = [NSString stringWithFormat:NSLocalizedString(@"SEND_INVITE_VIA_SMS_BUTTON_FORMAT",
-                                                        @"Text for button to send a Signal invite via SMS. %@ is "
+                                                        @"Text for button to send a SECROM Messenger invite via SMS. %@ is "
                                                         @"placeholder for the recipient's phone number."),
                                    displayName];
         [inviteeSection addItem:[OWSTableItem disclosureItemWithText:text

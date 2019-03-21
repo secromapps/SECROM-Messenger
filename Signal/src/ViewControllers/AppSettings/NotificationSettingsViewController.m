@@ -53,7 +53,7 @@
                                          }]];
 
     NSString *inAppSoundsLabelText = NSLocalizedString(@"NOTIFICATIONS_SECTION_INAPP",
-        @"Table cell switch label. When disabled, Signal will not play notification sounds while the app is in the "
+        @"Table cell switch label. When disabled, SECROM Messenger will not play notification sounds while the app is in the "
         @"foreground.");
     [soundsSection addItem:[OWSTableItem switchItemWithText:inAppSoundsLabelText
                                                   isOnBlock:^{

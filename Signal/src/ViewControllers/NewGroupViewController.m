@@ -381,7 +381,7 @@ NS_ASSUME_NONNULL_BEGIN
         [signalAccountSection
             addItem:[OWSTableItem
                         softCenterLabelItemWithText:NSLocalizedString(@"SETTINGS_BLOCK_LIST_NO_CONTACTS",
-                                                        @"A label that indicates the user has no Signal contacts.")]];
+                                                        @"A label that indicates the user has no SECROM Messenger contacts.")]];
     }
     [contents addSection:signalAccountSection];
 

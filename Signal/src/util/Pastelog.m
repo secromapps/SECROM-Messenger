@@ -525,7 +525,7 @@ typedef void (^DebugLogUploadFailure)(DebugLogUploader *uploader, NSError *error
 
     [body appendFormat:@"Device: %@ (%@)\n", UIDevice.currentDevice.model, platform];
     [body appendFormat:@"iOS Version: %@ \n", [UIDevice currentDevice].systemVersion];
-    [body appendFormat:@"Signal Version: %@ \n", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
+    [body appendFormat:@" SECROM Messenger Version: %@ \n", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
     [body appendFormat:@"Log URL: %@ \n", url];
 
     NSString *escapedBody =

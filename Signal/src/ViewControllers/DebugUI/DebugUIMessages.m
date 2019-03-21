@@ -3102,7 +3102,7 @@ typedef OWSContact * (^OWSContactBlock)(YapDatabaseReadWriteTransaction *transac
                                                   return contact;
                                               }]];
     [actions addObject:[self fakeContactShareMessageAction:thread
-                                                     label:@"System Contact w/o Signal"
+                                                     label:@"System Contact w/o SECROM Messenger"
                                               contactBlock:^(YapDatabaseReadWriteTransaction *transaction) {
                                                   OWSContact *contact = [OWSContact new];
                                                   OWSContactName *name = [OWSContactName new];
@@ -3117,7 +3117,7 @@ typedef OWSContact * (^OWSContactBlock)(YapDatabaseReadWriteTransaction *transac
                                                   return contact;
                                               }]];
     [actions addObject:[self fakeContactShareMessageAction:thread
-                                                     label:@"System Contact w. Signal"
+                                                     label:@"System Contact w. SECROM Messenger"
                                               contactBlock:^(YapDatabaseReadWriteTransaction *transaction) {
                                                   OWSContact *contact = [OWSContact new];
                                                   OWSContactName *name = [OWSContactName new];
@@ -3286,7 +3286,7 @@ typedef OWSContact * (^OWSContactBlock)(YapDatabaseReadWriteTransaction *transac
                                                   return contact;
                                               }]];
     [actions addObject:[self sendContactShareMessageAction:thread
-                                                     label:@"System Contact w/o Signal"
+                                                     label:@"System Contact w/o SECROM Messenger"
                                               contactBlock:^(YapDatabaseReadWriteTransaction *transaction) {
                                                   OWSContact *contact = [OWSContact new];
                                                   OWSContactName *name = [OWSContactName new];
@@ -3301,7 +3301,7 @@ typedef OWSContact * (^OWSContactBlock)(YapDatabaseReadWriteTransaction *transac
                                                   return contact;
                                               }]];
     [actions addObject:[self sendContactShareMessageAction:thread
-                                                     label:@"System Contact w. Signal"
+                                                     label:@"System Contact w. SECROM Messenger"
                                               contactBlock:^(YapDatabaseReadWriteTransaction *transaction) {
                                                   OWSContact *contact = [OWSContact new];
                                                   OWSContactName *name = [OWSContactName new];
