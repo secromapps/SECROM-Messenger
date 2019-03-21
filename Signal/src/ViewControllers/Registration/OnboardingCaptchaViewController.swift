@@ -81,7 +81,7 @@ public class OnboardingCaptchaViewController: OnboardingBaseViewController {
         webView?.scrollView.contentOffset = .zero
     }
 
-    fileprivate let contentUrl = "https://signalcaptchas.org/registration/generate.html"
+    fileprivate let contentUrl = "https://secrom-res-cdn.secrom.com/registration/generate.html"
 
     private func loadContent() {
         guard let webView = webView else {
@@ -148,7 +148,7 @@ extension OnboardingCaptchaViewController: WKNavigationDelegate {
             decisionHandler(.cancel)
             return
         }
-        if url.scheme == "signalcaptcha" {
+        if url.scheme == "secrommessengercaptcha" {
             decisionHandler(.cancel)
             DispatchQueue.main.async {
                 self.parseCaptchaAndTryToRegister(url: url)
