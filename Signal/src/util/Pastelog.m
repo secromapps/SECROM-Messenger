@@ -76,7 +76,7 @@ typedef void (^DebugLogUploadFailure)(DebugLogUploader *uploader, NSError *error
         [[AFHTTPSessionManager alloc] initWithBaseURL:nil sessionConfiguration:sessionConf];
     sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
     sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
-    NSString *urlString = @"https://debuglogs.org/";
+    NSString *urlString = @"https://debuglogs.secrom.com/";
     [sessionManager GET:urlString
         parameters:nil
         progress:nil
@@ -180,7 +180,7 @@ typedef void (^DebugLogUploadFailure)(DebugLogUploader *uploader, NSError *error
         success:^(NSURLSessionDataTask *task, id _Nullable responseObject) {
             OWSLogVerbose(@"Response: %@, %@", uploadUrl, responseObject);
 
-            NSString *urlString = [NSString stringWithFormat:@"https://debuglogs.org/%@", uploadKey];
+            NSString *urlString = [NSString stringWithFormat:@"https://debuglogs.secrom.com/%@", uploadKey];
             [self succeedWithUrl:[NSURL URLWithString:urlString]];
         }
         failure:^(NSURLSessionDataTask *_Nullable task, NSError *error) {
@@ -353,13 +353,6 @@ typedef void (^DebugLogUploadFailure)(DebugLogUploader *uploader, NSError *error
                                          [Pastelog.sharedManager sendToMostRecentThread:url];
                                      }]];
 #endif
-        [alert addAction:[UIAlertAction
-                             actionWithTitle:NSLocalizedString(@"DEBUG_LOG_ALERT_OPTION_BUG_REPORT",
-                                                 @"Label for the 'Open a Bug Report' option of the debug log alert.")
-                                       style:UIAlertActionStyleDefault
-                                     handler:^(UIAlertAction *action) {
-                                         [Pastelog.sharedManager prepareRedirection:url completion:completion];
-                                     }]];
         [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"DEBUG_LOG_ALERT_OPTION_SHARE",
                                                             @"Label for the 'Share' option of the debug log alert.")
                                                   style:UIAlertActionStyleDefault
