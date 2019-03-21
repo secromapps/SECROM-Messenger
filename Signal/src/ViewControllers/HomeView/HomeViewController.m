@@ -685,7 +685,8 @@ typedef NS_ENUM(NSInteger, HomeViewControllerSection) {
 {
     [super viewDidAppear:animated];
 
-    [self displayAnyUnseenUpgradeExperience];
+    // Disable Unseen upgrades
+    //[self displayAnyUnseenUpgradeExperience];
     [self applyDefaultBackButton];
 
     if (self.hasThemeChanged) {
@@ -976,28 +977,29 @@ typedef NS_ENUM(NSInteger, HomeViewControllerSection) {
 - (NSArray<ExperienceUpgrade *> *)unseenUpgradeExperiences
 {
     OWSAssertIsOnMainThread();
-
-    __block NSArray<ExperienceUpgrade *> *unseenUpgrades;
-    [self.uiDatabaseConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
-        unseenUpgrades = [ExperienceUpgradeFinder.sharedManager allUnseenWithTransaction:transaction];
-    }];
-    return unseenUpgrades;
+//    Disable unseenUpgrades
+//    __block NSArray<ExperienceUpgrade *> *unseenUpgrades;
+//    [self.uiDatabaseConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
+//        unseenUpgrades = [ExperienceUpgradeFinder.sharedManager allUnseenWithTransaction:transaction];
+//    }];
+//    return unseenUpgrades;
 }
 
-- (void)displayAnyUnseenUpgradeExperience
-{
-    OWSAssertIsOnMainThread();
-
-    NSArray<ExperienceUpgrade *> *unseenUpgrades = [self unseenUpgradeExperiences];
-
-    if (unseenUpgrades.count > 0) {
-        ExperienceUpgradesPageViewController *experienceUpgradeViewController =
-            [[ExperienceUpgradesPageViewController alloc] initWithExperienceUpgrades:unseenUpgrades];
-        [self presentViewController:experienceUpgradeViewController animated:YES completion:nil];
-    } else {
-        [OWSAlerts showIOSUpgradeNagIfNecessary];
-    }
-}
+//// Disable Unseen upgrades
+//- (void)displayAnyUnseenUpgradeExperience
+//{
+//    OWSAssertIsOnMainThread();
+//
+//    NSArray<ExperienceUpgrade *> *unseenUpgrades = [self unseenUpgradeExperiences];
+//
+//    if (unseenUpgrades.count > 0) {
+//        ExperienceUpgradesPageViewController *experienceUpgradeViewController =
+//            [[ExperienceUpgradesPageViewController alloc] initWithExperienceUpgrades:unseenUpgrades];
+//        [self presentViewController:experienceUpgradeViewController animated:YES completion:nil];
+//    } else {
+//        [OWSAlerts showIOSUpgradeNagIfNecessary];
+//    }
+//}
 
 - (void)tableViewSetUp
 {
