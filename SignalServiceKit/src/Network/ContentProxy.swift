@@ -14,8 +14,8 @@ public class ContentProxy: NSObject {
     @objc
     public class func sessionConfiguration() -> URLSessionConfiguration {
         let configuration = URLSessionConfiguration.ephemeral
-        let proxyHost = "contentproxy.signal.org"
-        let proxyPort = 443
+        let proxyHost = "contentproxy.secrom.com"
+        let proxyPort = 80
         configuration.connectionProxyDictionary = [
             "HTTPEnable": 1,
             "HTTPProxy": proxyHost,
