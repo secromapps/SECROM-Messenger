@@ -29,8 +29,6 @@ typedef NS_ENUM(NSInteger, TSWhisperMessageType) {
 #define textSecureServerURL @"https://messenger-service.secrom.com/"
 #define textSecureCDNServerURL @"https://secrom-profiles-cdn.secrom.com"
 // Use same reflector for service and CDN
-#define textSecureServiceReflectorHost @"textsecure-service-reflected.whispersystems.org"
-#define textSecureCDNReflectorHost @"textsecure-service-reflected.whispersystems.org"
 #define contactDiscoveryURL @"https://contact-discovery-prod.secrom.com"
 #define kUDTrustRoot @"BeN1gdHBhdXkDwCwAAdm5sv/CU/tIFASlU3fPfTRNGNd"
 #define USING_PRODUCTION_SERVICE
@@ -41,8 +39,6 @@ typedef NS_ENUM(NSInteger, TSWhisperMessageType) {
 //#define textSecureWebSocketAPI @"wss://textsecure-service-staging.whispersystems.org/v1/websocket/"
 //#define textSecureServerURL @"https://textsecure-service-staging.whispersystems.org/"
 //#define textSecureCDNServerURL @"https://cdn-staging.signal.org"
-//#define textSecureServiceReflectorHost @"meek-signal-service-staging.appspot.com";
-//#define textSecureCDNReflectorHost @"meek-signal-cdn-staging.appspot.com";
 //#define contactDiscoveryURL @"https://api-staging.directory.signal.org"
 //#define kUDTrustRoot @"BbqY1DzohE4NUZoVF+L18oUPrK3kILllLEJh2UnPSsEx"
 
