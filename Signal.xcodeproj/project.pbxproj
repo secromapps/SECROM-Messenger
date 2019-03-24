@@ -2783,7 +2783,7 @@
 						ProvisioningStyle = Automatic;
 					};
 					D221A088169C9E5E00537ABF = {
-						DevelopmentTeam = U68MSDN6DR;
+						DevelopmentTeam = V623KYLF7C;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -4108,7 +4108,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U68MSDN6DR;
+				DEVELOPMENT_TEAM = V623KYLF7C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -4174,7 +4174,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U68MSDN6DR;
+				DEVELOPMENT_TEAM = V623KYLF7C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
