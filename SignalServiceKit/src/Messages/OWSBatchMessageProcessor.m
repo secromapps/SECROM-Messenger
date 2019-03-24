@@ -341,7 +341,7 @@ NSString *const OWSMessageContentJobFinderExtensionGroup = @"OWSMessageContentJo
     static dispatch_queue_t queue = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        queue = dispatch_queue_create("org.whispersystems.message.process", DISPATCH_QUEUE_SERIAL);
+        queue = dispatch_queue_create("com.secrom.message.process", DISPATCH_QUEUE_SERIAL);
     });
     return queue;
 }

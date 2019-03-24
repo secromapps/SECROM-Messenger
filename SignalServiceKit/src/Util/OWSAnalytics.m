@@ -249,7 +249,7 @@ NSString *NSStringForOWSAnalyticsSeverity(OWSAnalyticsSeverity severity)
     static dispatch_queue_t queue = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        queue = dispatch_queue_create("org.whispersystems.analytics.serial", DISPATCH_QUEUE_SERIAL);
+        queue = dispatch_queue_create("com.secrom.analytics.serial", DISPATCH_QUEUE_SERIAL);
     });
     return queue;
 }

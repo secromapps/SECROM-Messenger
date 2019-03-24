@@ -143,7 +143,7 @@ NSString *const kSyncManagerLastContactSyncKey = @"kTSStorageManagerOWSSyncManag
     OWSAssertIsOnMainThread();
 
     if (!self.serialQueue) {
-        _serialQueue = dispatch_queue_create("org.whispersystems.contacts.syncing", DISPATCH_QUEUE_SERIAL);
+        _serialQueue = dispatch_queue_create("com.secrom.contacts.syncing", DISPATCH_QUEUE_SERIAL);
     }
 
     dispatch_async(self.serialQueue, ^{
