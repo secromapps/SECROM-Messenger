@@ -239,7 +239,7 @@ class InviteFlow: NSObject, MFMessageComposeViewControllerDelegate, MFMailCompos
         mailComposeViewController.setBccRecipients(recipientEmails)
 
         let subject = NSLocalizedString("EMAIL_INVITE_SUBJECT", comment: "subject of email sent to contacts when inviting to install SECROM Messenger")
-        let bodyFormat = NSLocalizedString("EMAIL_INVITE_BODY", comment: "body of email sent to contacts when inviting to install Signal. Embeds {{link to install Signal}} and {{link to the SECROM Messenger home page}}")
+        let bodyFormat = NSLocalizedString("EMAIL_INVITE_BODY", comment: "body of email sent to contacts when inviting to install SECROM Messenger. Embeds {{link to install SECROM Messenger}} and {{link to the SECROM Messenger home page}}")
         let body = String.init(format: bodyFormat, installUrl, homepageUrl)
         mailComposeViewController.setSubject(subject)
         mailComposeViewController.setMessageBody(body, isHTML: false)
