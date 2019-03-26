@@ -95,11 +95,13 @@ static const CGFloat kAttachmentUploadProgressTheta = 0.001f;
             }
 
             NSDictionary *responseDict = (NSDictionary *)responseObject;
+            NSHTTPURLResponse *response = ((NSHTTPURLResponse *)[task response]);
+            NSDictionary *headers = [response allHeaderFields];
             UInt64 serverId = ((NSDecimalNumber *)[responseDict objectForKey:@"id"]).unsignedLongLongValue;
             NSString *location = [responseDict objectForKey:@"location"];
 
             dispatch_async([OWSDispatch attachmentsQueue], ^{
-                [self uploadWithServerId:serverId location:location attachmentStream:attachmentStream];
+                [self uploadWithServerId:serverId location:location attachmentStream:attachmentStream additionalHeaders:headers];
             });
         }
         failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -112,6 +114,7 @@ static const CGFloat kAttachmentUploadProgressTheta = 0.001f;
 - (void)uploadWithServerId:(UInt64)serverId
                   location:(NSString *)location
           attachmentStream:(TSAttachmentStream *)attachmentStream
+         additionalHeaders:(NSDictionary *)additionalHeaders
 {
     OWSLogDebug(@"started uploading data for attachment: %@", self.attachmentId);
     NSError *error;
@@ -140,6 +143,9 @@ static const CGFloat kAttachmentUploadProgressTheta = 0.001f;
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:location]];
     request.HTTPMethod = @"PUT";
     [request setValue:OWSMimeTypeApplicationOctetStream forHTTPHeaderField:@"Content-Type"];
+    [additionalHeaders enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull header, BOOL * _Nonnull stop) {
+        [request setValue:key forHTTPHeaderField:header];
+    }]
 
     AFURLSessionManager *manager = [[AFURLSessionManager alloc]
         initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
