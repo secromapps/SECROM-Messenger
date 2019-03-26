@@ -95,8 +95,8 @@ static const CGFloat kAttachmentUploadProgressTheta = 0.001f;
             }
 
             NSDictionary *responseDict = (NSDictionary *)responseObject;
-            NSHTTPURLResponse *response = ((NSHTTPURLResponse *)[task response]);
-            NSDictionary *headers = [response allHeaderFields];
+
+            NSDictionary *headers = responseDict[@"headers"];
             UInt64 serverId = ((NSDecimalNumber *)[responseDict objectForKey:@"id"]).unsignedLongLongValue;
             NSString *location = [responseDict objectForKey:@"location"];
 
@@ -141,11 +141,12 @@ static const CGFloat kAttachmentUploadProgressTheta = 0.001f;
     attachmentStream.digest = digest;
 
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:location]];
+    [additionalHeaders enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull header, BOOL * _Nonnull stop) {
+        [request setValue:header forHTTPHeaderField:key];
+    }];
+
     request.HTTPMethod = @"PUT";
     [request setValue:OWSMimeTypeApplicationOctetStream forHTTPHeaderField:@"Content-Type"];
-    [additionalHeaders enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull header, BOOL * _Nonnull stop) {
-        [request setValue:key forHTTPHeaderField:header];
-    }]
 
     AFURLSessionManager *manager = [[AFURLSessionManager alloc]
         initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
