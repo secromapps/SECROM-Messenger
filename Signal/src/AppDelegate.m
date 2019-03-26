@@ -46,6 +46,8 @@
 #import <SignalServiceKit/TSSocketManager.h>
 #import <YapDatabase/YapDatabaseCryptoUtils.h>
 #import <sys/utsname.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @import WebRTC;
 @import Intents;
@@ -185,6 +187,8 @@ static NSTimeInterval launchStartedAt;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    [Fabric with:@[[Crashlytics class]]];
 
     // This should be the first thing we do.
     SetCurrentAppContext([MainAppContext new]);
