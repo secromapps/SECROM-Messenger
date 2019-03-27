@@ -28,7 +28,7 @@ _carthage_version=`carthage version`
 
 echo "CONFIGURATION: ${CONFIGURATION}"
 if [ "${CONFIGURATION}" = "App Store Release" ]; then
-    /usr/libexec/PlistBuddy -c "add :BuildDetails:XCodeVersion string '${XCODE_VERSION_MAJOR}.${XCODE_VERSION_MINOR}'" Signal/Signal-Info.plist
+#/usr/libexec/PlistBuddy -c "add :BuildDetails:XCodeVersion string '${XCODE_VERSION_MAJOR}.${XCODE_VERSION_MINOR}'" Signal/Signal-Info.plist
 
     # Use UTC
     _build_datetime=`date -u`
