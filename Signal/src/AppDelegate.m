@@ -533,6 +533,7 @@ static NSTimeInterval launchStartedAt;
     }
 
     OWSLogInfo(@"registered vanilla push token");
+    OWSLogInfo([NSString stringWithFormat:@"device token = %@", deviceToken]);
     [self.pushRegistrationManager didReceiveVanillaPushToken:deviceToken];
 }
 
