@@ -15,7 +15,7 @@ class InviteFlow: NSObject, MFMessageComposeViewControllerDelegate, MFMailCompos
     }
 
     let installUrl = "https://secrom.com/software-downloads"
-    let homepageUrl = "https://secrom.comg"
+    let homepageUrl = "https://secrom.com"
 
     @objc
     let actionSheetController: UIAlertController
