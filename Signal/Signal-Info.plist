@@ -6,10 +6,8 @@
 	<dict>
 		<key>CarthageVersion</key>
 		<string>0.28.0</string>
-		<key>DateTime</key>
-		<string>Sun Mar 31 00:13:16 UTC 2019</string>
 		<key>OSXVersion</key>
-		<string>10.13.6</string>
+		<string>10.14</string>
 		<key>WebRTCCommit</key>
 		<string>55de5593cc261fa9368c5ccde98884ed1e278ba0 M72</string>
 	</dict>
