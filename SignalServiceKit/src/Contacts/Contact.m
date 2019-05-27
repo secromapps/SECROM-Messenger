@@ -260,7 +260,7 @@ NS_ASSUME_NONNULL_BEGIN
     OWSAssertDebug([self.textSecureIdentifiers containsObject:recipientId]);
 
     NSString *value = self.phoneNumberNameMap[recipientId];
-    OWSAssertDebug(value);
+    //OWSAssertDebug(value);
     if (!value) {
         return NSLocalizedString(@"PHONE_NUMBER_TYPE_UNKNOWN",
             @"Label used when we don't what kind of phone number it is (e.g. mobile/work/home).");

@@ -489,7 +489,7 @@ typedef void (^CustomLayoutBlock)(void);
 - (void)learnMoreButtonTapped:(UIGestureRecognizer *)gestureRecognizer
 {
     if (gestureRecognizer.state == UIGestureRecognizerStateRecognized) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://secrom.com/knowledgebase/secrom-messenger/safety-numbers"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://messenger.secrom.com/knowledgebase/safety-numbers"]];
     }
 }
 

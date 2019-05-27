@@ -39,7 +39,7 @@ public class OnboardingCaptchaViewController: OnboardingBaseViewController {
         self.webView = webView
         webView.navigationDelegate = self
         webView.allowsBackForwardNavigationGestures = false
-        webView.customUserAgent = "SECROM Messenger (+https://secrom.com)"
+        webView.customUserAgent = "SECROM Messenger (+https://messenger.secrom.com)"
         webView.allowsLinkPreview = false
         webView.scrollView.contentInset = .zero
         webView.layoutMargins = .zero

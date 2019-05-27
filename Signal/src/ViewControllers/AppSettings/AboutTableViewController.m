@@ -70,7 +70,7 @@
     [helpSection addItem:[OWSTableItem disclosureItemWithText:NSLocalizedString(@"SETTINGS_SUPPORT", @"")
                                                   actionBlock:^{
                                                       [[UIApplication sharedApplication]
-                                                          openURL:[NSURL URLWithString:@"https://secrom.com/knowledgebase/secrom-messenger"]];
+                                                          openURL:[NSURL URLWithString:@"https://messenger.secrom.com/knowledgebase"]];
                                                   }]];
     [contents addSection:helpSection];
 

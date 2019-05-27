@@ -521,7 +521,7 @@ NSString *const kProfileView_LastPresentedDate = @"kProfileView_LastPresentedDat
 {
     if (sender.state == UIGestureRecognizerStateRecognized) {
         [UIApplication.sharedApplication
-            openURL:[NSURL URLWithString:@"https://secrom.com/knowledgebase/secrom-messenger/user-profile"]];
+            openURL:[NSURL URLWithString:@"https://messenger.secrom.com/knowledgebase/user-profile"]];
     }
 }
 
