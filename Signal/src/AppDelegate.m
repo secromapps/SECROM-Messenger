@@ -307,6 +307,8 @@ static NSTimeInterval launchStartedAt;
 
     [OWSAnalytics appLaunchDidBegin];
 
+    self.window.tintColor = UIColor.redColor;
+
     return YES;
 }
 

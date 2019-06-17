@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)ows_signalBrandBlueColor
 {
-    return [UIColor colorWithRed:0.1135657504f green:0.4787300229f blue:0.89595204589999999f alpha:1.];
+    //return [UIColor colorWithRed:0.1135657504f green:0.4787300229f blue:0.89595204589999999f alpha:1.];
+    // Secrom Messanger is using red: #FF0000
+    return [UIColor colorWithRed:1.f green:0.f blue:0.f alpha:1.f];
 }
 
 + (UIColor *)ows_materialBlueColor
