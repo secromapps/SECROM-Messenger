@@ -40,7 +40,7 @@ class SAEFailedViewController: UIViewController {
                                                                 action: #selector(cancelPressed))
         self.navigationItem.title = "SECROM Messenger"
 
-        self.view.backgroundColor = UIColor.ows_signalBrandBlue
+        self.view.backgroundColor = UIColor.white
 
         let logoImage = UIImage(named: "logoSignal")
         let logoImageView = UIImageView(image: logoImage)

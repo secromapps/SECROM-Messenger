@@ -37,7 +37,7 @@ NSString *NSStringForScreenLockUIState(ScreenLockUIState value)
 {
     [super loadView];
 
-    self.view.backgroundColor = UIColor.ows_materialBlueColor;
+    self.view.backgroundColor = UIColor.whiteColor;
 
     UIView *edgesView = [UIView containerView];
     [self.view addSubview:edgesView];
