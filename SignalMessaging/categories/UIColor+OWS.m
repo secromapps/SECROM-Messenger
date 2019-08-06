@@ -16,14 +16,16 @@ NS_ASSUME_NONNULL_BEGIN
 {
     //return [UIColor colorWithRed:0.1135657504f green:0.4787300229f blue:0.89595204589999999f alpha:1.];
     // Secrom Messanger is using red: #FF0000
-    return [UIColor colorWithRed:1.f green:0.f blue:0.f alpha:1.f];
+    // now is darkgray
+    return [UIColor darkGrayColor];
 }
 
 + (UIColor *)ows_materialBlueColor
 {
     // blue: #2090EA
     // Secrom Messanger is using red: #FF0000
-    return [UIColor colorWithRed:1.f green:0.f blue:0.f alpha:1.f];
+    // now is darkgray
+    return [UIColor darkGrayColor];
 }
 
 + (UIColor *)ows_darkIconColor
@@ -134,7 +136,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)ows_signalBlueColor
 {
     // Secrom Messanger is using red: #FF0000
-    return [UIColor colorWithRGBHex:0xFF0000];
+    // now dark gray
+    return [UIColor darkGrayColor];
 }
 
 + (UIColor *)ows_greenColor
@@ -204,7 +207,8 @@ NS_ASSUME_NONNULL_BEGIN
 {
     // HEX 0xc2090EA
     // Secrom Messanger is using red: #FF0000
-    return [UIColor colorWithRed:1.f green:0.f blue:0.f alpha:1.f];
+    // now is using dark gray
+    return [UIColor darkGrayColor];
 }
 
 @end
