@@ -63,6 +63,9 @@ class CallViewController: OWSViewController, CallObserver, CallServiceObserver, 
     var videoModeVideoButton: UIButton!
     var videoModeFlipCameraButton: UIButton!
 
+    var audioChatButton: UIButton!
+    var videoChatButton: UIButton!
+
     // MARK: - Incoming Call Controls
 
     var incomingCallControls: UIStackView!
@@ -366,7 +369,8 @@ class CallViewController: OWSViewController, CallObserver, CallServiceObserver, 
     }
 
     func buttonSize() -> CGFloat {
-        return ScaleFromIPhone5To7Plus(84, 108)
+        //return ScaleFromIPhone5To7Plus(84, 108)
+        return ScaleFromIPhone5To7Plus(68, 88)
     }
 
     func buttonInset() -> CGFloat {
@@ -391,6 +395,13 @@ class CallViewController: OWSViewController, CallObserver, CallServiceObserver, 
 
         audioModeMuteButton.accessibilityLabel = NSLocalizedString("CALL_VIEW_MUTE_LABEL",
                                                                    comment: "Accessibility label for muting the microphone")
+
+        audioChatButton = createButton(image: #imageLiteral(resourceName: "message-active-wide"), action: #selector(didPressChat))
+        audioChatButton.accessibilityLabel = "Chat"
+
+        videoChatButton = createButton(image: #imageLiteral(resourceName: "message-active-wide"), action: #selector(didPressChat))
+        videoChatButton.accessibilityLabel = "Chat"
+
 
         audioModeVideoButton = createButton(image: #imageLiteral(resourceName: "audio-call-video-inactive"),
                                             action: #selector(didPressVideo))
@@ -420,11 +431,11 @@ class CallViewController: OWSViewController, CallObserver, CallServiceObserver, 
         ongoingCallControls.alignment = .center
         view.addSubview(ongoingCallControls)
 
-        ongoingAudioCallControls = UIStackView(arrangedSubviews: [audioModeMuteButton, audioSourceButton, audioModeVideoButton])
+        ongoingAudioCallControls = UIStackView(arrangedSubviews: [audioModeMuteButton, audioSourceButton, audioModeVideoButton, audioChatButton])
         ongoingAudioCallControls.distribution = .equalSpacing
         ongoingAudioCallControls.axis = .horizontal
 
-        ongoingVideoCallControls = UIStackView(arrangedSubviews: [videoModeMuteButton, videoModeFlipCameraButton, videoModeVideoButton])
+        ongoingVideoCallControls = UIStackView(arrangedSubviews: [videoModeMuteButton, videoModeFlipCameraButton, videoModeVideoButton, videoChatButton])
         ongoingAudioCallControls.distribution = .equalSpacing
         ongoingVideoCallControls.axis = .horizontal
     }
@@ -859,6 +870,31 @@ class CallViewController: OWSViewController, CallObserver, CallServiceObserver, 
         muteButton.isSelected = !muteButton.isSelected
 
         callUIAdapter.setIsMuted(call: call, isMuted: muteButton.isSelected)
+    }
+
+    @objc func didPressChat(sender chatButton: UIButton) {
+        Logger.info("chat")
+
+
+        let conversationViewController = ConversationViewController()
+        conversationViewController.configure(for: thread, action: ConversationViewAction.none, focusMessageId: nil)
+
+        //navigationController?.pushViewController(conversationViewController, animated: true)
+
+        let dissmisButton = createButton(image: #imageLiteral(resourceName: "ic_circled_x"), action: #selector(dissmisChat))
+        dissmisButton.translatesAutoresizingMaskIntoConstraints = false
+        navigationController?.present(conversationViewController, animated: true, completion: {
+            conversationViewController.view.addSubview(dissmisButton)
+            NSLayoutConstraint.activate([
+                dissmisButton.topAnchor.constraint(equalTo: conversationViewController.view.topAnchor, constant: 20),
+                dissmisButton.leftAnchor.constraint(equalTo: conversationViewController.view.leftAnchor, constant: 10),
+                ])
+        })
+
+    }
+
+    @objc private func dissmisChat(sender: UIButton) {
+        navigationController?.dismiss(animated: true, completion: nil)
     }
 
     @objc func didPressAudioSource(sender button: UIButton) {
