@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B12CFE05B0967EAABDEF78AF02B84AB2"
+               BlueprintIdentifier = "11319FE11E0F163FEF714A606CCC265F"
                BuildableName = "SignalServiceKit.framework"
                BlueprintName = "SignalServiceKit"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -41,78 +41,6 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "NO">
-      <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D221A0A9169C9E5F00537ABF"
-               BuildableName = "SignalTests.xctest"
-               BlueprintName = "SignalTests"
-               ReferencedContainer = "container:Signal.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0F5F53A777AE07B93DD73494B95A3393"
-               BuildableName = "SignalServiceKit-Unit-Tests.xctest"
-               BlueprintName = "SignalServiceKit-Unit-Tests"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3966AB1BF4A267B3775E55BB346C42BB"
-               BuildableName = "SignalCoreKit-Unit-Tests.xctest"
-               BlueprintName = "SignalCoreKit-Unit-Tests"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FBEFD7D60C586B4EBC4A2D8A609B1884"
-               BuildableName = "AxolotlKit-Unit-Tests.xctest"
-               BlueprintName = "AxolotlKit-Unit-Tests"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "217139450FBCFCCE72F03EFEE0C5DA38"
-               BuildableName = "Curve25519Kit-Unit-Tests.xctest"
-               BlueprintName = "Curve25519Kit-Unit-Tests"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB39B3A5A9E8A82A835D8CD5DEBB7CDC"
-               BuildableName = "HKDFKit-Unit-Tests.xctest"
-               BlueprintName = "HKDFKit-Unit-Tests"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B620B404CB76E484E77870B9AD32320E"
-               BuildableName = "SignalMetadataKit-Unit-Tests.xctest"
-               BlueprintName = "SignalMetadataKit-Unit-Tests"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -129,8 +57,78 @@
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D221A0A9169C9E5F00537ABF"
+               BuildableName = "SignalTests.xctest"
+               BlueprintName = "SignalTests"
+               ReferencedContainer = "container:Signal.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B772E882F193AA2F25932C514BBF0805"
+               BuildableName = "SignalServiceKit-Unit-Tests.xctest"
+               BlueprintName = "SignalServiceKit-Unit-Tests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5C9F6BA9ADC4724B2612C9F20FBE2076"
+               BuildableName = "SignalCoreKit-Unit-Tests.xctest"
+               BlueprintName = "SignalCoreKit-Unit-Tests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BF2BCB29C9D47F15FB156F1EC64E5CC2"
+               BuildableName = "AxolotlKit-Unit-Tests.xctest"
+               BlueprintName = "AxolotlKit-Unit-Tests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "78DE33AED82B26B4B8D899CC403003AF"
+               BuildableName = "Curve25519Kit-Unit-Tests.xctest"
+               BlueprintName = "Curve25519Kit-Unit-Tests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AF7FC2C93AA68E33600807F168BD483A"
+               BuildableName = "HKDFKit-Unit-Tests.xctest"
+               BlueprintName = "HKDFKit-Unit-Tests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B086B0C72F8A5814FF48795531F21635"
+               BuildableName = "SignalMetadataKit-Unit-Tests.xctest"
+               BlueprintName = "SignalMetadataKit-Unit-Tests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -144,6 +142,7 @@
       debugDocumentVersioning = "YES"
       stopOnEveryThreadSanitizerIssue = "YES"
       stopOnEveryUBSanitizerIssue = "YES"
+      migratedStopOnEveryIssue = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       showNonLocalizedStrings = "YES">
@@ -179,8 +178,6 @@
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "App Store Release"

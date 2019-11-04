@@ -162,6 +162,9 @@ class CallViewController: OWSViewController, CallObserver, CallServiceObserver, 
         Logger.info("")
         NotificationCenter.default.removeObserver(self)
         self.proximityMonitoringManager.remove(lifetime: self)
+        if navigationController?.presentedViewController != nil {
+            navigationController?.dismiss(animated: false, completion: nil)
+        }
     }
 
     @objc func didBecomeActive() {
